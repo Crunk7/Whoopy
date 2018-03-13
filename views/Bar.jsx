@@ -6,7 +6,7 @@ import { parser } from 'css-math';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { colors } from './utils/colors';
 
-const barColor = colors.GRAY;
+const barColor = colors.RED;
 const scoreLabelWidth = '1.5rem';
 const scorePadding = '0.5rem';
 

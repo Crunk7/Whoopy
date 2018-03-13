@@ -31,6 +31,8 @@ app.use(bodyParser.json());
 require('./config/express')(app);
 
 
+
+
 app.get('/', (req, res) => {
   res.render('index', {
     bluemixAnalytics: !!process.env.BLUEMIX_ANALYTICS,
@@ -38,13 +40,27 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/analyze', (req, res, next) => {
+  var parameters = {
+    'text': req.body.text,
+    'features': {
+      'entities': {
+        'model': "10:54a8cc97-cab0-4a5a-8a67-c07e00de1bbc",
+        'limit': 50
+      },
+      'relations': {
+        'model': "10:54a8cc97-cab0-4a5a-8a67-c07e00de1bbc",
+        'limit': 50
+      }
+    }
+  };
   if (process.env.SHOW_DUMMY_DATA) {
     res.json(require('./payload.json'));
   } else {
-    nlu.analyze(req.body, (err, results) => {
+    nlu.analyze(parameters, (err, results) => {
       if (err) {
         return next(err);
       }
+      console.log(results);
       return res.json({ query: req.body.query, results });
     });
   }

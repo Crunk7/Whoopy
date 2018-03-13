@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Icon } from 'watson-react-components';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
+
 const styles = StyleSheet.create({
   container: {
     width: 'calc(100% - 2rem)',
@@ -19,6 +20,7 @@ const styles = StyleSheet.create({
     marginLeft: '1rem',
     border: 'none',
     padding: '0rem',
+    fontColor: '#4178be',
   },
 });
 

@@ -162,8 +162,8 @@ const palette = {
 };
 
 const colors = {
-  PRIMARY: palette.PURPLE_50,
-  PRIMARY_LIGHT: palette.PURPLE_40,
+  PRIMARY: palette.BLUE_50,
+  PRIMARY_LIGHT: palette.BLUE_30,
   LIGHT_GRAY: palette.GRAY_30,
   GRAY: palette.GRAY_50,
   DARK_GRAY: palette.GRAY_70,

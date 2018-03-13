@@ -1,8 +1,5 @@
-# Natural Language Understanding Application [![Build Status](https://travis-ci.org/watson-developer-cloud/natural-language-understanding-nodejs.svg?branch=master)](https://travis-ci.org/watson-developer-cloud/natural-language-understanding-nodejs?branch=master)
-
+# Natural Language Understanding Application [![Build Status]
 Natural Language Understanding is a collection of APIs that offer text analysis through natural language processing. This set of APIs can analyze text to help you understand its concepts, entities, keywords, sentiment, and more. Additionally, you can create a custom model for some APIs to get specific results that are tailored to your domain.
-
-[![Demo](demo.gif)](https://natural-language-understanding-demo.mybluemix.net)
 
 ## Deploy the application using the Deploy to Bluemix button
 
@@ -15,18 +12,6 @@ Clicking on the button below creates a Bluemix DevOps Toolchain and deploys this
 1. You need a Bluemix account. If you don't have one, [sign up][sign_up].
 
 2. Download and install the [Cloud-foundry CLI][cloud_foundry] tool if you haven't already.
-
-3. Edit the `manifest.yml` file and change `<application-name>` to something unique. The name you use determines the URL of your application. For example, `<application-name>.mybluemix.net`.
-
-  ```yml
-  applications:
-  - services:
-    - my-service-instance
-    name: <application-name>
-    command: npm start
-    path: .
-    memory: 512M
-  ```
 
 4. Connect to Bluemix with the command line tool.
 

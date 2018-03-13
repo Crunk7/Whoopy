@@ -92,7 +92,6 @@ export default React.createClass({
     return (
       <div>
         <OutputTemplate
-          description={<p className="base--p_small">Extract people, companies, organizations, cities, geographic features, and <a href="https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/#entities" target="_blank" rel="noopener noreferrer">other information</a> from the content.</p>}
           data={{ entities: this.props.data }}
           showJson={this.state.showJson}
           onExitJson={this.toggleJson}
@@ -101,12 +100,11 @@ export default React.createClass({
           {this.props.data && this.props.data.length > 0 ? (
             <div>
               <Table
-                columns={['Name', 'Type', 'Score']}
+                columns={['Type', 'Name']}
                 theme={tableTheme}
                 data={this.props.data.reduce((acc, item) => {
                   acc.push({ Name: item.text,
-                    Type: item.type,
-                    Score: <Bar score={item.relevance} /> });
+                    Type: item.type});
                   return acc;
                 }, []).filter((val, i) => i <= this.state.visibleItems)}
               />
